@@ -38,7 +38,7 @@ First, you'll need the [DotDeb repository](https://www.dotdeb.org/instructions/)
 
 ### PHP 7 (+ Basic Extensions)
 
-Run these commands to get PHP 7 installed:
+Run these commands to get PHP 7 installed. These instructions assume you have Ubuntu 16.04 or Debian Jessie [with the dotdeb repository](https://www.dotdeb.org/instructions/) already set up:
 
     # Let's get, and verify, the correct PGP public key
     gpg --fingerprint 6572BBEF1B5FF28B28B706837E3F070089DF5277
