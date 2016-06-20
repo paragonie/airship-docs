@@ -39,9 +39,9 @@ Airship offers three strategies for extending its base features:
 1. Cabins, which are entire applications (see #3 below).
 2. Gadgets, which are plugins that can be applied at a per-Cabin level 
    or across every Cabin in your ship.
-3. Gears (see #5 below). **For power users.**
+3. Motifs, which change the look and feel of your Airship. 
 
-All Cabins, Gadgets, and Gears can be assigned to a vendor (which has
+All Cabins, Gadgets, and Motifs can be assigned to a vendor (which has
 its own Ed25519 key pair), and that supplier has control of the 
 distribution of automatic updates.
 
@@ -58,7 +58,8 @@ barriers to entry.
 
 ### 3. Supports a multi-site architecture out of the box.
 
-Each Cabin is its own website. Install as many Cabins as you need.
+Each Cabin is its own website. Install as many Cabins as you need. No 
+questionable hacks needed.
 
 ### 4. Designed by progressive-minded application security professionals.
 
@@ -73,7 +74,7 @@ to extend and customize the core classes to meet their needs, we
 designed our application around the `Gears` system.
 
 Most of the core `Engine` classes can be extended at runtime by the
-`Gadgets` you create (or install from the community). Instead of
+extensions you create (or install from the community). Instead of
 accessing the core classes directly, load the latest version of the Gear
 (which could be our code, or yours).
 
@@ -81,20 +82,74 @@ accessing the core classes directly, load the latest version of the Gear
 
 ### Vulnerabilities we Prevent
  
-* **Using Components with Known Vulnerabilities** - We provide automatic
-  security updates.
+What follows is a list of security vulnerabilities you will almost certainly
+never have to worry about if you use CMS Airship.
+
+* **Malicious File Uploads**
+  * Airship uses a virtual filesystem that offers read-only access (and only
+    to authorized users) to uploaded files. Files will never execute in the
+    server nor in your browser.
 * **SQL Injection** is effectively mitigated by our use of prepared 
   statements in nearly every context. Where prepared statements aren't
   used, a typecast to int or strict whitelist of allowed characters is
   enforced instead.
-* **Cross-Site Scripting** is mitigated on two fronts:
+* **Insecure Session Management**
+  * If you use HTTPS, all cookies are only sent over HTTPS.
+  * Additionally, we support **Hypertext-Strict-Transport-Security** and
+    **HTTP Public-Key-Pinning** out of the box.
+* **Broken Authentication**
+  * Airship uses state-of-the-art authentication protocols.
+  * Airship rejects weak passwords that hackers could easily guess.
+  * Passwords are never stored directly.
+  * Account recovery tokens can be encrypted with your GnuPG public key.
+  * Users can even *opt out* of the password reset feature entirely.
+  * You cannout access any sensitive features without authorization.
+* **Cross-Site Scripting** (XSS) is mitigated on two fronts:
   * **Output Escaping** (rather than *Input* escaping) practively
     prevents most XSS vulnerabilities from even occurring.
   * **Content-Security-Policy headers** act as a second line of defense
     for browsers. This is an exploit mitigation feature which should not
-    be *relied* on. It's like a seatbelt for your passengers. 
+    be *relied* on. It's like a seatbelt for your passengers.
+* **Insecure Direct Object Reference**
+  * Our router is a whitelist, not a lazy match-maker.
+* **Sensitive Data Exposure**
+  * When an exception occurs, we hide passwords and other sensitive infromation
+    from stack traces.
+* **Missing Function Level Access Control**
+  * Airship has comprehensive yet simple access controls management baked in:
+    * Hierarchical group-based and user-based access controls
+    * Multi-site architecture where each site has its own permissions matrix
+    * Groups can inherit permissions in a hierarchy
+    * Permission can be granted to groups or users
+    * The UX for all of the above is simple and intuitive
+* **Cross-Site Request Forgery**
+  * All POST data has mandatory CSRF protection built-in. Additionally,
+    Airship offers best-in-class CSRF mitigation techniques that prevents token
+    reuse.
+* **Using Components with Known Vulnerabilities** - We provide automatic
+  security updates.
+* **Open Redirects**
+  * (Unless you go out of your way to make it happen, of course.)
+* **PHP Object Injection**
+  * We never use `unserialize()`
+* **Insecure Random Number Generator**
+  * Airship uses a cryptographically secure random number generator,
+    exclusively.
 * **Insecure Cryptographic Storage** is a non-issue; we make full use of
   the Sodium cryptographic library (through Paragon Initiative
   Enterprise's Halite API).
   * **Passwords** hashed with `Argon2i` then encrypted with an
     authenticated encryption feature (Xsalsa20 + keyed BLAKE2b)
+* **Password-Hashing Denial of Service Attack**
+  * We rate-limit failed login requests based on IP range and username. Each
+    successive attempt incurs a progressive delay up to a configurable maximum.
+* **Security Misconfiguration**
+  * We ship with secure defaults. While you can always weaken security through
+    customization, we ship a secure product.
+
+### Other Security Benefits
+
+* Tor-friendly server-side communications
+* Manage your security headers from a web interface.
+  * Content-Security-Policy
+  * HTTP Public-Key-Pinning
