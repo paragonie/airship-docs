@@ -80,6 +80,20 @@ accessing the core classes directly, load the latest version of the Gear
 
 ## The Security Benefits of using Airship
 
+Compare, for example, [this guide to securing WordPress](https://codex.wordpress.org/Hardening_WordPress)
+with our guide to securing Airship:
+
+1. Use TLS (if you use [Caddy](https://github.com/paragonie/airship-docs/blob/master/en-us/01-intro/2-Installing.md#caddy-recommended),
+   this is automatic in production environments).
+2. Don't disable automatic updates.
+3. Use a strong password.
+   * and/or two-factor authentication
+
+That's it. You don't need to jump through a dozen hoops to prevent your website
+from being used by criminals to distribute malware or launch Distributed Denial
+of Service attacks. Even if our infrastrucutre is compromised, your Airship is
+protected by [strong cryptography](https://paragonie.com/blog/2016/05/keyggdrasil-continuum-cryptography-powering-cms-airship).
+
 ### Vulnerabilities we Prevent
  
 What follows is a list of security vulnerabilities you will almost certainly
