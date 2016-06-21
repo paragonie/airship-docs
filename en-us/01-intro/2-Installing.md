@@ -2,12 +2,12 @@
 
 **Requirements**:
 
-* PHP 7.0.4 or newer
+* PHP 7.0 or newer
   * In general, try to always run the latest version available.
 * PostgreSQL 9.5 or newer
 * libsodium 1.0.9 or newer
   * (Not released as of this writing)
-* ext/sodium 1.0.3 or newer
+* ext/sodium 1.0.6 or newer
   * You can install it from PECL after libsodium is installed
 * ext/curl
 * ext/json
@@ -26,7 +26,8 @@
 4. Install ext/sodium (requires PECL)
 5. Install ext/curl
 6. Configure/restart your webserver
-7. Visit your Airship's URL to finish the process
+7. Download CMS Airship
+8. Visit your Airship's URL to finish the process
 
 # Installing on GNU/Linux
 
@@ -89,13 +90,12 @@ Run these commands to get PHP 7 installed. These instructions assume you have Ub
 
 ### Libsodium
 
-> **Note**: As of right now, libsodium 1.0.9 has not been released.
-
-Next, you will need to [install libsodium and ext/sodium](https://paragonie.com/book/pecl-libsodium/read/00-intro.md#installing-libsodium). Something like these commands ought to do the trick.
+Next, you will need to [install libsodium and ext/sodium](https://paragonie.com/book/pecl-libsodium/read/00-intro.md#installing-libsodium).
+Something like these commands ought to do the trick.
 
     git clone https://github.com/jedisct1/libsodium.git
     cd libsodium
-    git checkout tags/1.0.9
+    git checkout tags/1.0.10
     ./autogen.sh
     ./configure && make distcheck
     sudo make install
@@ -120,7 +120,7 @@ Feel free to customize it to meet your needs. It assumes PHP7-FPM.
 #### Nginx
 
 Refer to the [nginx documentation](http://nginx.org/en/docs/install.html).
-You may be able to get away with:
+You should be able to get away with:
 
     sudo apt-get install php7.0-fpm nginx
 
@@ -133,9 +133,39 @@ of your Airship.
 #### Apache
 
 Refer to the [Apache documentation](https://httpd.apache.org/docs/current/install.html).
-You may be able to get away with:
+You should be able to get away with:
 
     sudo apt-get install php7.0 apache2
 
 You'll want to set your document root to the `src/public` subdirectory
 of your Airship.
+
+### Installing CMS Airship
+
+Once your webserver is setup and configured, you're ready to begin installing
+CMS Airship.
+
+(Beta only): Use Git and Composer.
+
+    cd /var/www/
+    git clone https://github.com/paragonie/airship.git
+    git checkout v0.3.0
+    cd airship
+    composer install
+
+If you don't already have a PostgreSQL database set up:
+
+    sudo su postgres -c "createuser airship -P"
+    # You will be prompted for a password twice.
+    sudo su postgres -c "createdb -O airship airship"
+
+If you haven't already done so, restart your webserver then visit the URL or IP
+address that corresponds to the active virtual host in your browser.
+
+Once you access the web installer, a security cookie is placed in your browser
+which prevents anyone from accessing the installer until the process is 
+finished. If you get locked out, run this command and reload
+the page. (You will have to start over, but the process is brief.)
+
+    php src/Installer/launch.php reset
+    
