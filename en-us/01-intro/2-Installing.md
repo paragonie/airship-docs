@@ -67,7 +67,7 @@ Run these commands to get PHP 7 installed. These instructions assume you have Ub
 
 ### PostgreSQL
 
-    deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main
+    echo "deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main" >> /etc/apt/sources.list
     # Let's get, and verify, the correct PGP public key
     gpg --fingerprint B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8
     if [ $? -ne 0 ]; then
@@ -107,12 +107,35 @@ Next, you will need to [install libsodium and ext/sodium](https://paragonie.com/
 
 #### Caddy (Recommended)
 
-TODO: Explain how to install/configure [Caddy Server](https://caddyserver.com), which already offers LetsEncrypt integration.
+The easiest webserver (and likely the most secure) is [Caddy](https://caddyserver.com).
+One of its main advantages is automatic HTTPS integration with the certificate
+authority, [LetsEncrypt](https://letsencrypt.org).
+
+Refer to the [Caddy quick start](https://github.com/mholt/caddy#quick-start) to
+set up Caddy and [Running Caddy in production](https://github.com/mholt/caddy#running-in-production).
+
+Your Caddyfile should look like [the example](example-config/Caddyfile).
+Feel free to customize it to meet your needs. It assumes PHP7-FPM.
 
 #### Nginx
 
-TODO: Explain how to install/configure nginx with LetsEncrypt integration.
+Refer to the [nginx documentation](http://nginx.org/en/docs/install.html).
+You may be able to get away with:
+
+    sudo apt-get install php7.0-fpm nginx
+
+Your virtual host configuration file should look like [the exmaple](example-config/nginx.conf).
+Feel free to customize it to meet your needs.
+
+You'll want to set your document root to the `src/public` subdirectory
+of your Airship.
 
 #### Apache
 
-TODO: Explain how to install/configure Apache with LetsEncrypt integraiton.
+Refer to the [Apache documentation](https://httpd.apache.org/docs/current/install.html).
+You may be able to get away with:
+
+    sudo apt-get install php7.0 apache2
+
+You'll want to set your document root to the `src/public` subdirectory
+of your Airship.
