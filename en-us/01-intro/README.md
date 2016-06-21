@@ -23,7 +23,7 @@ developing an extension of Airship's core functionality.
 
 ## Sections in this Chapter 
 
-  * [Lingo/Jargon](01-intro/1-Lingo-Jargon.md)
-  * [Installing CMS Airship](01-intro/2-Installing.md)
-    * [Example configuration files](01-intro/example-config)
+  * [Lingo/Jargon](1-Lingo-Jargon.md)
+  * [Installing CMS Airship](2-Installing.md)
+    * [Example configuration files](example-config)
 
