@@ -26,5 +26,3 @@ context, then all of that group's descendants will also be allowed.
 ![Screenshot: Quickly see the permissions for a given URL](bridge_perms_test.png)
 
 ![Screenshot: Managing permissions for a context](bridge_perms_manage.png)
-
-[Next: Using the Blog Features](02-Blog.md)

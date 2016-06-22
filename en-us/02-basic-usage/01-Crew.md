@@ -69,3 +69,7 @@ Airship provides this group arrangement by default:
   * Writer
 
 An Administrator is also simultaneously a Moderator and a Registered User.
+
+To learn more about permissions, see [the Permissions section in the End Users' Guide](../03-end-users-guide/Bridge/Permissions.md).
+
+[Next: Using the Blog Features](02-Blog.md)
