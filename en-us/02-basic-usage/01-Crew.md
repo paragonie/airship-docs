@@ -57,6 +57,18 @@ to e.g. an entire department.
 
 * A user may belong in multiple groups.
 
+Airship provides this group arrangement by default:
+
+* Guest
+* Registered User
+  * Moderator
+    * Administrator
+  * Publisher
+  * Trusted Commentor
+  * Writer
+
+An Administrator is also simultaneously a Moderator and a Registered User.
+
 ## Permissions
 
 Airship uses a whitelist access controls system based on three concepts:
@@ -81,5 +93,9 @@ allow access, not deny access. (That's what white-list means.)
 
 If you set a rule to allow a group to perform an action within a given 
 context, then all of that group's descendants will also be allowed.
+
+![Screenshot: Quickly see the permissions for a given URL](bridge_perms_test.png)
+
+![Screenshot: Managing permissions for a context](bridge_perms_manage.png)
 
 [Next: Using the Blog Features](02-Blog.md)
