@@ -93,3 +93,5 @@ When you are done, click "Create Series".
 
 Blog posts can have any number of tags. They're exactly what most users expect
 from a tagging system.
+
+[Next: Account Settings](03-Account.md)
