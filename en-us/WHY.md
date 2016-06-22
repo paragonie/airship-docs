@@ -80,7 +80,7 @@ accessing the core classes directly, load the latest version of the Gear
 
 ## The Security Benefits of using Airship
 
-Compare, for example, [this guide to securing WordPress](https://codex.wordpress.org/Hardening_WordPress)
+Compare, for example, [this long guide to securing WordPress](https://codex.wordpress.org/Hardening_WordPress)
 with our guide to securing Airship:
 
 1. Use TLS (if you use [Caddy](https://github.com/paragonie/airship-docs/blob/master/en-us/01-intro/2-Installing.md#caddy-recommended),
@@ -154,7 +154,7 @@ never have to worry about if you use CMS Airship.
   Enterprise's Halite API).
   * **Passwords** hashed with `Argon2i` then encrypted with an
     authenticated encryption feature (Xsalsa20 + keyed BLAKE2b)
-* **Password-Hashing Denial of Service Attack**
+* **Password-Hashing Denial of Service Attack** and/or **Login Brute-Force**
   * We rate-limit failed login requests based on IP range and username. Each
     successive attempt incurs a progressive delay up to a configurable maximum.
 * **Security Misconfiguration**

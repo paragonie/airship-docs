@@ -8,7 +8,7 @@ Collectively refers to Engineers and Pilots.
 
 ### Engineer
 
-An engineer is someone who develops Gears, Gadgets, or Cabins for their own
+An engineer is someone who develops Motifs, Gadgets, or Cabins for their own
 Airship or for others'.
 
 ### Pilot
@@ -32,15 +32,16 @@ but that's rather unimaginative. Where's their sense of adventure?
 * `Engine`  -> Framework
   * These classes power the entire airship; most classes can be upgraded
 * `Gadgets` -> Plugins
-  * Adds features to an existing cabin
+  * Adds features to an existing cabin (or to all cabins)
 * `Gears`   -> Framework Alterations
   * Upgradeable Engine components - extends the core framework -
     **recommended for advanced users only**!
 * `Installer` -> (Self-explanatory)
   * Our installer code is self-contained and strictly outside of the
     document root.
-* `MotiFs`  -> Themes
-  * Community-provided templates and stylesheets 
+* `Motifs`  -> Themess
+  * Community-provided templates and stylesheets. Can be assigned to a specific
+    Cabin or universal.
 * `config`  -> Configuration
 * `lang`    -> Language-specific stuff (for internationalization)
 * `public`  -> Public web root (point your webserver here)
