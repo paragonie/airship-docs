@@ -70,3 +70,4 @@ Lenses are template files rendered by Twig.
 A Landing is analogous to a Controller in a traditional MVC framework.
 Landings are your passengers' destinations. 
 
+[Next: Installing Airship](2-Installing.md)

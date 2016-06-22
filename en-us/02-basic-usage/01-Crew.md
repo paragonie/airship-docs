@@ -18,6 +18,9 @@ authors, and each author may be shared across multiple users.
 
 * An author is a public persona, decoupled from your user account, that
   you can (optionally) share with other users.
+* To invite users to collaborate under an Author identity, you only need
+  the user's Public ID, which is a distinct randomly generated value from
+  their username and display name.
 
 ## Groups
 
@@ -51,3 +54,5 @@ allow access, not deny access. (That's what white-list means.)
 
 If you set a rule to allow a group to perform an action within a given 
 context, then all of that group's descendants will also be allowed.
+
+[Next: Using the Blog Features](02-Blog.md)

@@ -169,3 +169,7 @@ the page. (You will have to start over, but the process is brief.)
 
     php src/Installer/launch.php reset
     
+From this point, follow the prompts on the web-based installer and you'll be
+ready to take off.
+
+[Next: Basic Usage](https://github.com/paragonie/airship-docs/tree/master/en-us/02-basic-usage).
