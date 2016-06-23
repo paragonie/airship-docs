@@ -9,18 +9,18 @@ to be used anywhere.
 
 ## Constants
 
-### AIRSHIP_VERSION
+### `AIRSHIP_VERSION`
 
 Type: `string`
 Purpose: The current Airship version.
 
-### AIRSHIP_BLAKE2B_PERSONALIZATION
+### `AIRSHIP_BLAKE2B_PERSONALIZATION`
 
 Type: `string`
 Purpose: This is used by [Keyggdrasil](Engine/Keyggdrasil.php.md) (and related
          components) to personalize the BLAKE2b hashes used in the Merkle tree.
 
-## Function
+## Functions
 
 ### `\Airship\all_keys_exist()`
 
@@ -35,7 +35,7 @@ Returns true if all the keys in `$keys` were found in `$haystack`.
 * `array $haystack = []`
   * The array we are searching
 
-## `\Airship\array_from_http_query()`
+### `\Airship\array_from_http_query()`
 
 **Return type**: `array`
 
@@ -46,7 +46,7 @@ The inverse of PHP's `http_build_query()`. Safely uses `parse_str()`.
 * `string $queryString = ''`
   * The HTTP query string
 
-## `\Airship\array_multi_diff()`
+### `\Airship\array_multi_diff()`
 
 **Return type**: `array`
 
@@ -59,7 +59,7 @@ Calculate a diff between two multidimensional arrays.
 * `array $old`
   * The "old" array.
 
-## `\Airship\autoload()`
+### `\Airship\autoload()`
 
 **Return type**: `bool`
 
@@ -73,7 +73,7 @@ escaping. For example: `~/Cabins` expands the `~` to the real path of `src`.
 * `string $directory`
   * The directory we should search for files.
 
-## `\Airship\chunk()`
+### `\Airship\chunk()`
 
 **Return type**: `array`
 
@@ -89,7 +89,7 @@ For example: `\Airship\chink('#test#123', '#')` yields `['test', '123']`, not
 * `string $token`
   * The token to use for splitting the string.
 
-## `\Airship\configWriter()`
+### `\Airship\configWriter()`
 
 **Return type:** `\Twig_Environment`
 
@@ -102,7 +102,7 @@ Lens function.
 * `string $rootDir`
   * The directory to load templates from
 
-## `\Airship\csp_merge()`
+### `\Airship\csp_merge()`
 
 **Return type**: `array`
 
@@ -115,7 +115,7 @@ being useful for creating per-page CSP exceptions.
 * `array ...$policies`
   * As many policies as we need to merge.
 
-## `\Airship\expand_version()`
+### `\Airship\expand_version()`
 
 ** Return type**: `int`
 
@@ -126,7 +126,7 @@ Expand a version string to a comparable integer. e.g. `5.4.19-RC1` => `5041901`
 * `string $version`
   * The version string. Should be a semantic version (`x.y.z`).
 
-## `\Airship\get_ancestors()`
+### `\Airship\get_ancestors()`
 
 **Return type**: `array`
 
@@ -137,7 +137,7 @@ Get all of the parent classes that a particular class inherits from.
 * `string $class`
   * The name of the class we are looking up.
 
-## `\Airship\get_caller_namespace()`
+### `\Airship\get_caller_namespace()`
 
 **Return type**: `string`
 
@@ -164,7 +164,7 @@ This should output `string(3) "Bar"`.
 * `int $offset = 0`
   * How many steps back should we look?
 
-## `\Airship\get_database()`
+### `\Airship\get_database()`
 
 **Return type**: `\Airship\Engine\Database`
 
@@ -184,7 +184,7 @@ $db->run("SELECT * FROM foo WHERE id = ?", 3);
 * `string $id = 'default'`
   * Which configured database to select?
 
-## `\Airship\get_gravatar_url()`
+### `\Airship\get_gravatar_url()`
 
 **Return type**: `string`
 
@@ -195,7 +195,7 @@ Returns a Gravatar URL for a given email address.
 * `string $email`
   * Your email address
 
-## `\Airship\getRecaptcha()`
+### `\Airship\getRecaptcha()`
 
 **Return type**: `ReCaptcha\ReCaptcha`
 
@@ -212,7 +212,7 @@ to Google.
 * `array $opts = []`
   * An array of cURL options
 
-## `\Airship\is_disabled()`
+### `\Airship\is_disabled()`
 
 **Return type**: `bool`
 
@@ -223,7 +223,7 @@ Returns TRUE if a particular function is disabled in php.ini
 * `string $function`
   * The name of the function to check
 
-## `\Airship\json_response()`
+### `\Airship\json_response()`
 
 This function outputs the parameters you pass into a prettied JSON output, then
 *terminates PHP execution*. Optionally, you can supply a [`SignatureSecretKey`](https://github.com/paragonie/halite/blob/master/doc/Classes/Asymmetric/SignatureSecretKey.md)
@@ -245,7 +245,7 @@ If headers haven't been sent, this also sends a Content-Type header:
   * An instance of [`SignatureSecretKey`](https://github.com/paragonie/halite/blob/master/doc/Classes/Asymmetric/SignatureSecretKey.md)
     or [`SignatureKeyPair`](https://github.com/paragonie/halite/blob/master/doc/Classes/SignatureKeyPair.md)
 
-## `\Airship\keySlice()`
+### `\Airship\keySlice()`
 
 **Return type**: `array`
 
@@ -278,7 +278,7 @@ array(2) {
 * `array $keys = []`
   * The keys to select
 
-## `\Airship\list_all_files()`
+### `\Airship\list_all_files()`
 
 **Return type**: `array`
 
@@ -291,7 +291,7 @@ List all the files in a directory (and subdirectories)
 * `string $extension = '*'`
   * Optionally filter based on file extension
 
-## `\Airship\loadJSON()`
+### `\Airship\loadJSON()`
 
 **Return type**: mixed
 *Throws* `\Airship\Alerts\FileSystem\AccessDenied`
@@ -304,7 +304,7 @@ Load a commented JSON file and parse it.
 * `string $file`
   * The file to load and parse.
 
-## `\Airship\parseJSON()`
+### `\Airship\parseJSON()`
 
 **Return type**: mixed
 
@@ -322,7 +322,7 @@ Parse a commented JSON file.
   * See [`json_decode()`](https://secure.php.net/json_decode) for supported
     options.
 
-## `\Airship\path_to_filename()`
+### `\Airship\path_to_filename()`
 
 **Return type**: `string`
 
@@ -335,7 +335,7 @@ Given a file path, only return the file name. Optionally, trim the extension.
 * `bool $trimExtension = false`
   * Should we trim the file extension?
 
-## `\Airship\redirect()`
+### `\Airship\redirect()`
 
 Serve an HTTP 301 redirect to the destination URL. If you pass an array, this
 function will build the GET parameters for you.
@@ -347,7 +347,7 @@ function will build the GET parameters for you.
 * `array $params = []`
   * Builds a query string and appends it to the destination URL.
 
-## `\Airship\queryString()`
+### `\Airship\queryString()`
 
 **Return type**: `string`
 
@@ -375,7 +375,7 @@ and reference them by `key.subkey.another`.
 * `string $driver = ''`
   * Which DB driver are we using?
 
-## `\Airship\queryStringRoot()`
+### `\Airship\queryStringRoot()`
 
 **Return type**: `string`
 
@@ -389,7 +389,7 @@ See `\Airship\queryString()` above for more information.
 * `array $params = []`
   * Replace `{{ key }}` with the respective value in the query string.
 
-## `\Airship\saveJSON()`
+### `\Airship\saveJSON()`
 
 **Return type**: `bool`
 
@@ -402,7 +402,7 @@ Save data as a pretty JSON document.
 * `mixed $data`
   * The data we are seralizing and saving
 
-## `\Airship\secure_shuffle()`
+### `\Airship\secure_shuffle()`
 
 Securely shuffle an array, using the Fisher-Yates algorithm with a CSPRNG.
 See: [Common Uses for CSPRNGs](https://paragonie.com/blog/2015/07/common-uses-for-csprngs-cryptographically-secure-pseudo-random-number-generators#shuffle)
@@ -412,7 +412,7 @@ See: [Common Uses for CSPRNGs](https://paragonie.com/blog/2015/07/common-uses-fo
 * `array &$array`
   * A reference to an array. It will be shuffled in-place.
 
-## `\Airship\slugFromTitle()`
+### `\Airship\slugFromTitle()`
 
 **Return type**: `string`
 
@@ -423,7 +423,7 @@ Determine the valid slug for a given title, before de-duplication.
 * `string $title`
   * The user-provided title we are converting to a slug.
 
-## `\Airship\tempnam()`
+### `\Airship\tempnam()`
 
 Like PHP's [`tempnam()`](https://secure.php.net/tempnam) but allows you to specify the file extension.
 
@@ -437,7 +437,7 @@ Like PHP's [`tempnam()`](https://secure.php.net/tempnam) but allows you to speci
   * Where to save the temporary file? Defaults to the system's temporary files
     directory.
 
-## `\Airship\throwableToArray()`
+### `\Airship\throwableToArray()`
 
 **Return type**: `array`
 
@@ -448,7 +448,7 @@ Convert an Exception or Error into an array (for logging)
 * `\Throwable $ex`
   * The `\Exception` or `\Error` we are converting.
 
-## `\Airship\tightenBolts()`
+### `\Airship\tightenBolts()`
 
 Invoke all of the `tighten[BoltNameGoesHere]Bolt()` methods.
 
@@ -458,7 +458,7 @@ Invoke all of the `tighten[BoltNameGoesHere]Bolt()` methods.
   * An object that, presumably, possesses a `Bolt` with a
     `tightenBoltnameBolt()` method.
 
-## `\Airship\uniqueId()`
+### `\Airship\uniqueId()`
 
 Creates a unique ID (Base64UrlSafe-encoded random string).
 
