@@ -1,6 +1,6 @@
 # Crew
 
-This section covers user accounts, authentication, and access controls.
+This section covers the basics of user accounts, Authors, and collaboration.
 
 ## Users
 

@@ -1,6 +1,8 @@
 # Permissions
 
-Airship uses a whitelist access controls system based on three concepts:
+**Administrator Access Required**
+
+Airship uses a white-list access controls system based on three concepts:
 
 1. **Contexts**: Where are you in the application?
 2. **Actions**: What are you trying to do?

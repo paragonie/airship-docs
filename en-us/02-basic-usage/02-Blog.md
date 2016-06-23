@@ -1,5 +1,34 @@
 # Using the Blog Features
 
+## Blog Posts
+
+If you are logged into an account that has permission to create blog posts,
+visiting `{bridge URL}/blog/post` should yield a "New Blog Post" button. If you
+do not see this button, an administrator can grant you access by, for example,
+adding you to the "Writer" group.
+
+* Post Title: This will be the headline that your readers see.
+* Category: What category does this blog post belong to?
+* Author: Select an [Author](01-Crew.md) to attribute this blog post to.
+* Post Format: Blog posts can be written in:
+  * Markdown
+  * ReStructuredText
+  * Rich Text
+  * Raw HTML
+* Cache: If you check this box, your blog post will be cached as a static page.
+  This is useful for if a blog post goes viral on Slashdot, Hacker News, etc.
+* Tags: Check all the tags that apply to this blog post.
+* Description: This goes in the Meta tags and is previewed in the RSS feed for
+  the blog.
+
+The large textbox is where the contents of your blog post goes.
+
+![Screenshot: Drafting a New Blog Post](bridge_blog_post_new.png)
+
+If you have permission to publish blog posts, you will be see the Publish
+button. Otherwise, you can only save a draft. Once a blog post is published,
+it will be live on the front page.
+
 ## Categories
 
 Categories are like folders on a computer. Folders can contain files or other
@@ -93,34 +122,5 @@ When you are done, click "Create Series".
 
 Blog posts can have any number of tags. They're exactly what most users expect
 from a tagging system.
-
-## Blog Posts
-
-If you are logged into an account that has permission to create blog posts,
-visiting `{bridge URL}/blog/post` should yield a "New Blog Post" button. If you
-do not see this button, an administrator can grant you access by, for example,
-adding you to the "Writer" group.
-
-* Post Title: This will be the headline that your readers see.
-* Category: What category does this blog post belong to?
-* Author: Select an [Author](01-Crew.md) to attribute this blog post to.
-* Post Format: Blog posts can be written in:
-  * Markdown
-  * ReStructuredText
-  * Rich Text
-  * Raw HTML
-* Cache: If you check this box, your blog post will be cached as a static page.
-  This is useful for if a blog post goes viral on Slashdot, Hacker News, etc.
-* Tags: Check all the tags that apply to this blog post.
-* Description: This goes in the Meta tags and is previewed in the RSS feed for
-  the blog.
-
-The large textbox is where the contents of your blog post goes.
-
-![Screenshot: Drafting a New Blog Post](bridge_blog_post_new.png)
-
-If you have permission to publish blog posts, you will be see the Publish
-button. Otherwise, you can only save a draft. Once a blog post is published,
-it will be live on the front page.
 
 [Next: Account Settings](03-Account.md)

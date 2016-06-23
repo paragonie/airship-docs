@@ -10,13 +10,17 @@
 * ext/sodium 1.0.6 or newer
   * You can install it from PECL after libsodium is installed
 * ext/curl
+* ext/gd
 * ext/json
 * ext/pgsql
 
 **Optional**:
 
-* If you have Tor installed, your Airship can proxy all network requests over the Tor network, thus preventing your server's IP address from being revealed.
-* If your version of PHP doesn't ship with the JSON extension, you must install that separately.
+* If you have Tor installed, your Airship can proxy all network requests over
+  the Tor network, thus preventing your server's IP address from being
+  revealed.
+* If your version of PHP doesn't ship with the JSON extension, you must install
+  that separately.
 
 ## The General Install Workflow
 
