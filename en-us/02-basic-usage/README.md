@@ -9,5 +9,6 @@ help people get familiar with the basic UI and the most common features.
   * [Using the Blog Features](02-Blog.md)
   * [Account Settings](03-Account.md)
   * [Uploading Files](04-Files.md)
+  * [Administrator Features](admin-features)
 
 [Next Chapter: End Users' Guide](../03-end-users-guide)
