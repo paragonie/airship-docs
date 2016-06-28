@@ -149,13 +149,18 @@ of your Airship.
 Once your webserver is setup and configured, you're ready to begin installing
 CMS Airship.
 
-(Beta only): Use Git and Composer.
+Use Git and Composer to obtain [the latest release](https://github.com/paragonie/airship/releases).
 
     cd /var/www/
     git clone https://github.com/paragonie/airship.git
-    git checkout v0.3.0
+    git checkout v1,0.2
     cd airship
     composer install
+
+Since Airship self-updates, it needs to be able to write to itself.
+
+    chown -R myusername:www-data airship
+    chmod -R g+w airship
 
 If you don't already have a PostgreSQL database set up:
 
