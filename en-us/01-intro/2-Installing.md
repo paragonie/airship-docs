@@ -153,7 +153,7 @@ Use Git and Composer to obtain [the latest release](https://github.com/paragonie
 
     cd /var/www/
     git clone https://github.com/paragonie/airship.git
-    git checkout v1,0.2
+    git checkout v1.0.2
     cd airship
     composer install
 
