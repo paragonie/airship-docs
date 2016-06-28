@@ -128,7 +128,7 @@ You should be able to get away with:
 
     sudo apt-get install php7.0-fpm nginx
 
-Your virtual host configuration file should look like [the exmaple](example-config/nginx.conf).
+Your virtual host configuration file should look like [the example](example-config/nginx.conf).
 Feel free to customize it to meet your needs.
 
 You'll want to set your document root to the `src/public` subdirectory
