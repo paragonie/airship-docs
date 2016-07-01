@@ -67,7 +67,7 @@ Run these commands to get PHP 7 installed. These instructions assume you have Ub
     gpg -a --export 6572BBEF1B5FF28B28B706837E3F070089DF5277 | sudo apt-key add -
     
     # Install PHP from DotDeb
-    sudo apt-get -y install php7.0 php7.0-cli php7.0-fpm php7.0-json php7.0-pgsql php7.0-curl php7.0-dev
+    sudo apt-get -y install php7.0 php7.0-cli php7.0-fpm php7.0-json php7.0-pgsql php7.0-curl php7.0-dev php7.0-mbstring php7.0-gd
     sudo wget https://pear.php.net/go-pear.phar
     
     # The PEAR team doesn't provide a GPG signature, so we have to do this:
@@ -75,6 +75,10 @@ Run these commands to get PHP 7 installed. These instructions assume you have Ub
     if [ $? -eq 0 ]; then
         php go-pear.phar
     fi
+    
+    sudo pecl install zip
+    echo "extension=zip.so" > /etc/php/7.0/cli/conf.d/20-zip.ini
+    echo "extension=zip.so" > /etc/php/7.0/fpm/conf.d/zip.ini
 
 ### PostgreSQL
 
@@ -159,7 +163,8 @@ Use Git and Composer to obtain [the latest release](https://github.com/paragonie
 
     cd /var/www/
     git clone https://github.com/paragonie/airship.git
-    git checkout v1.0.2
+    cd airship
+    git checkout v1.1.0
     cd airship
     composer install
 
