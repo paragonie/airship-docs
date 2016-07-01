@@ -6,6 +6,9 @@ There's a [Docker image](https://hub.docker.com/r/co60ca/airship/) available to 
 
 ## Manual Installation
 
+> Note: If you have trouble verifying GPG signatures, you might need to
+> [change the GPG library path](http://jotham-city.com/blog/2015/02/14/verifying-gpg-signatures-for-makepkg/).
+
 **Requirements**:
 
 * PHP 7.0 or newer
@@ -18,7 +21,9 @@ There's a [Docker image](https://hub.docker.com/r/co60ca/airship/) available to 
 * ext/curl
 * ext/gd
 * ext/json
+* ext/mbstring
 * ext/pgsql
+* ext/zip
 
 **Optional**:
 
