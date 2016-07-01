@@ -1,5 +1,11 @@
 # Installing Airship
 
+## Easy Mode
+
+There's a [Docker image](https://hub.docker.com/r/co60ca/airship/) available to use.
+
+## Manual Installation
+
 **Requirements**:
 
 * PHP 7.0 or newer
