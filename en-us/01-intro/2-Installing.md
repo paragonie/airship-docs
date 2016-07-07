@@ -2,7 +2,8 @@
 
 ## Easy Mode
 
-There's a [Docker image](https://hub.docker.com/r/co60ca/airship/) available to use.
+There's a docker-compose.yml file in [the main repo](https://github.com/paragonie/airship) that used along side with
+docker-compose will build and run the necessary software. See [the official docker documentation](https://docs.docker.com/compose/overview/) for details on how to utilize the docker-compose.
 
 ## Manual Installation
 
