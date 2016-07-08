@@ -9,9 +9,9 @@ version requirements to the latest version available.
 
 | PHP Version | Airship Version | Release Date | End of Support |
 |-------------|-----------------|--------------|----------------|
-| 7.0.x       | 1.x.y           | 2016-06-??   | 2019-06-??     |
-| 7.1.x       | 2.x.y           | 2016-??-??   | 2019-??-??     |  
-| 7.2.x       | 3.x.y           | 2017-??-??   | 2020-??-??     |
+| 7.0.x       | 1.x.y           | 2016-06-27   | 2019-06-26     |
+| 7.1.x       | 2.x.y           | 2017-01-01   | 2019-12-31     |  
+| 7.2.x       | 3.x.y           | 2018-01-01   | 2020-12-31     |
 
 We aim to release a new major version of CMS Airship once PHP releases a new
 minor version. If a version of PHP has reached end-of-life, the corresponding
