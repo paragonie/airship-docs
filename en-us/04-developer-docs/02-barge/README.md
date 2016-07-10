@@ -1,0 +1,15 @@
+# Getting Started with `barge`
+
+  * [Installing `barge`](01-install-barge.md)
+  * [Creating your Supplier Account](02-supplier-account.md)
+  * [Using Barge](03-using-barge.md)
+  * [Command Reference](04-barge-commands.md)
+    * [Build your extension: `barge build`](04-barge-commands.md)
+    * [Create a new Cabin project: `barge cabin`](04-barge-commands.md)
+    * [Create a new Gadget project: `barge gadget`](04-barge-commands.md)
+    * [View the help information: `barge help`](04-barge-commands.md)
+    * [Key management: `barge key`](04-barge-commands.md)
+    * [Login to a Supplier Account: `barge login`](04-barge-commands.md)
+    * [Create a new Motif project: `barge motif`](04-barge-commands.md)
+    * [Release your extension: `barge release`](04-barge-commands.md)
+    * [Sign your extension: `barge sign`](04-barge-commands.md)
