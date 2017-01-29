@@ -171,7 +171,6 @@ Use Git and Composer to obtain [the latest release](https://github.com/paragonie
     git clone https://github.com/paragonie/airship.git
     cd airship
     git checkout v1.1.0
-    cd airship
     composer install
 
 Since Airship self-updates, it needs to be able to write to itself.
