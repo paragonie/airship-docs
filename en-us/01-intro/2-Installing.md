@@ -74,7 +74,7 @@ Run these commands to get PHP 7 installed. These instructions assume you have Ub
     
     # Install PHP from DotDeb
     sudo apt-get -y install php7.0 php7.0-cli php7.0-fpm php7.0-json php7.0-pgsql php7.0-curl php7.0-dev php7.0-mbstring php7.0-gd
-    sudo wget https://pear.php.net/go-pear.phar
+    wget https://pear.php.net/go-pear.phar
     
     # The PEAR team doesn't provide a GPG signature, so we have to do this:
     echo "8322214a6979a0917f0068af924428a80ff7083b94343396b13dac1d0f916748025fab72290af340d30633837222c277  go-pear.phar" | sha384sum -c
@@ -88,7 +88,7 @@ Run these commands to get PHP 7 installed. These instructions assume you have Ub
 
 ### PostgreSQL
 
-    echo "deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main" >> /etc/apt/sources.list
+    echo "deb https://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main" >> /etc/apt/sources.list
     # Let's get, and verify, the correct PGP public key
     gpg --fingerprint B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8
     if [ $? -ne 0 ]; then
